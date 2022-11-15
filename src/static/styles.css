@@ -1,0 +1,53 @@
+.title{
+    background-color: #5b4fff;
+    color: white;
+    border: solid rgb(85, 180, 243) 3px;
+    border-radius: 15px;
+    margin: 40px;
+    text-align: center
+}
+
+.title:hover{
+    background-color: #00858a;
+}
+
+.toDo{
+    background-color: #ff874f;
+    color: rgba(0, 0, 0, 0.842);
+    border: solid rgba(13, 231, 162, 0.616) 3px;
+    border-radius: 15px;
+    margin-right: 20%;
+    margin-left: 20%;
+    text-align: center;
+}
+
+table{
+    width:100%
+}
+
+.submit{
+    background-color: #5b4fff;
+    color: white;
+    border: solid rgb(85, 180, 243) 3px;
+    border-radius: 15px;
+    width: 15%;
+    padding:5px;
+    display: block;
+    margin:auto;
+    margin-bottom:15px
+}
+
+form{
+    text-align: center
+}
+
+button{
+    background-color: #f7f1f6;
+    border-radius:10px
+}
+
+table th,
+table td {
+    padding: 0.75rem;
+    width:50%
+}

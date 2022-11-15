@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>To Do List</title>
+        <meta charset="utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1">
+    </head>
+    <body>
+        <div class = "title">
+            <h1>To Do List</h1>
+        </div>
+        <div class = "submit">
+            <form method = "post" action="/">
+                <input type = "text" name = "task"> 
+                <button type = "submit">Submit</button>
+            </form>
+        </div>
+        <div class = "toDo">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Done</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for task in tasks %}
+                    <tr>
+                        <td>{{task[1]}}</td>
+                        <td>
+                            <form method = "post" action = "./">
+                                <input type="hidden" name = "tick" value="{{task[0]}}">
+                                <button id = "{{index}}" class = "tick" type = "submit">❌</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <script>
+            ticks = document.querySelectorAll(".tick");
+            for (let index = 0; index < ticks.length; index++) {
+                ticks[index].addEventListener("click", function(e){
+                    ticks[index].innerHTML = "✅";
+                });
+                
+            }
+        </script>
+    </body>
+   
+</html>
